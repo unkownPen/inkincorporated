@@ -1,65 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+// Paste your Firebase Config here!
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  databaseURL: "https://YOUR_PROJECT.firebaseio.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "123456789",
+  appId: "1:123456789:web:abcdef123456"
+};
 
-.hidden {
-    display: none;
-}
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
 
-/* Password Screen */
-#auth-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f0f0f0;
-}
-
-.auth-box {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.auth-box input, .auth-box button {
-    padding: 8px;
-    margin: 5px;
-}
-
-/* Main Website */
-header {
-    background: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-nav a.active {
-    font-weight: bold;
-}
-
-.tab-content {
-    padding: 20px;
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-[contenteditable="true"] {
-    border: 1px solid #ccc;
-    padding: 10px;
-    min-height: 100px;
-    margin: 10px 0;
-}
+// Tab Switching
+document.querySelectorAll('.tab-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('.tab-link').forEach(l => l.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        
+        link.classList.add('active');
+        document.getElementById(link.dataset.tab).classList.add('active');
+    });
+});
