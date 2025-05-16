@@ -1,12 +1,12 @@
 // Paste your Firebase Config here!
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef123456"
+  apiKey: "AIzaSyBJdQx3oRPIA2Klhf7EX7Och3cWQ1t5__Y",
+  authDomain: "inkcorporated-956ce.firebaseapp.com",
+  databaseURL: "https://inkcorporated-956ce-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "inkcorporated-956ce",
+  storageBucket: "inkcorporated-956ce.firebasestorage.app",
+  messagingSenderId: "883369780723",
+  appId: "1:883369780723:web:e00bfab79853f56fa7de86"
 };
 
 // Initialize Firebase
